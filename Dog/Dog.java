@@ -1,3 +1,5 @@
+package Dog;
+
 public class Dog {
     String name;
     String color;
@@ -16,5 +18,12 @@ public class Dog {
             fed = true;
             weight += amount;
         }
+    }
+
+    public String isfed(){
+      if(fed){
+        return "true";
+      }
+      return "false";
     }
 }
