@@ -22,8 +22,8 @@ public class Dog {
 
     public String isfed(){
       if(fed){
-        return "true";
+        return "Yes, he is fed. He now weights "+weight;
       }
-      return "false";
+      return "That boy starvin";
     }
 }
