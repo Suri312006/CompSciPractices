@@ -5,7 +5,8 @@ import java.util.*;
 public class WhatsPoppin {
     public static void main(String[] penis){
         Dog fido = new Dog("fido", "brown", 50, false);
-        Dog dumbass = new Dog("dumbass", "red", 100, false);
+        Dog dumbass = new Dog("dumbass", "blue", 100, false);
+        Dog clifford = new Dog("Clifford", "red", 10000000, true);
         Scanner input = new Scanner(System.in);
 
         /*
@@ -23,13 +24,15 @@ public class WhatsPoppin {
 
         fido.bite(dumbass, 70);
 
-        if(!dumbass.isAlive()){
-            System.out.println("dumbass fucking died ");
-        }
-
+        clifford.bite(fido, clifford.getWeight());
         System.out.print(dumbass);
 
 
+
+
+    }
+
+    public static void createDog(){
 
     }
 }

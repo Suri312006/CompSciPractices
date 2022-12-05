@@ -80,6 +80,16 @@ public class Dog {
         this.weight += chunk;
         this.fed = true;
 
+        if(!bitten.alive){
+            System.out.println(name+" fucking killed "+bitten.name);
+        }
+
+    }
+    
+    public String toString(){
+        return "Name: "+name + ", Color: "+color +", Weight: "+weight+", Fed? "+fed+", Alive? "+alive;
+
+
     }
 
 
