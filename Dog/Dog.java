@@ -7,7 +7,16 @@ public class Dog {
     private int weight;
     private boolean fed;
 
-   private  boolean alive = true;
+    private int lic;
+
+    //putting private -> encapsulation
+   private boolean alive = true;
+
+   //static means its not specific to each dog, applies to every dog at once (communism)
+    //meanwhile non staic --> specific to each dog (individual)
+   private static boolean free = true;
+
+   private static int licenseNo = 1;
 
     //constructor (should loook exactly like this)
     public Dog(String name, String color, int weight, boolean fed){
@@ -15,14 +24,22 @@ public class Dog {
         this.color = color;
         this.weight = weight;
         this.fed = fed;
+
+        this.lic = licenseNo++;
     }
-    // constructor for stray
+    // constructor for stray (overloaded)
     public Dog(String color, int weight) {
         this.name = "Stray";
         this.color = color;
         this.weight = weight;
         this.fed = false;
+
+        this.lic = licenseNo++;
     }
+
+    public static void catchEm(){free = false;}
+
+    public static void freeEm(){free = true;}
     public String getName(){
         return name;
     }
@@ -83,15 +100,9 @@ public class Dog {
         if(!bitten.alive){
             System.out.println(name+" fucking killed "+bitten.name);
         }
-
     }
-    
     public String toString(){
-        return "Name: "+name + ", Color: "+color +", Weight: "+weight+", Fed? "+fed+", Alive? "+alive;
-
-
+        return "License Number: " + lic + ", Name: "+name + ", Color: "+color +", Weight: "+weight+", Fed? "+fed+", Alive? "+alive;
     }
-
-
 
 }

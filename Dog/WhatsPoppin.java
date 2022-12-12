@@ -1,30 +1,28 @@
 package Dog;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class WhatsPoppin {
     public static void main(String[] penis){
+
+        //here fido is an instance of the dog class
         Dog fido = new Dog("fido", "brown", 50, false);
         Dog dumbass = new Dog("dumbass", "blue", 100, false);
         Dog clifford = new Dog("Clifford", "red", 10000000, true);
+
+        Dog.freeEm();
         Scanner input = new Scanner(System.in);
 
-        /*
-        Dog[] Dogs = {fido, dumbass};
+
+        Dog[] Dogs = {fido, dumbass, clifford};
         for(Dog dog : Dogs){
-            System.out.print("Do you want to feed "+dog.name+" ? (Enter y or n): ");
-            String response = input.nextLine();
-            if(response.equals("y")){
-                System.out.print("How much do you want to feed "+dog.name+" ? ");
-                int fedAmount = input.nextInt();
-                dog.feed((fedAmount));
-            }
+            System.out.println(dog);
         }
-        */
 
+        //fido is an implicit parameter for the bite method inside dog
         fido.bite(dumbass, 70);
-
         clifford.bite(fido, clifford.getWeight());
+
         System.out.print(dumbass);
 
 
