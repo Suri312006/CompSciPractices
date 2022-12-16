@@ -89,12 +89,20 @@ public class Dog {
 
     public void bite(Dog bitten, int chunk){
         int temp = bitten.weight - chunk;
+        int preBiteWeight = bitten.weight;
         if(temp < bitten.weight / 2){
             bitten.alive = false;
         }
-        bitten.weight -= chunk;
+        if(chunk < bitten.weight) {
+            bitten.weight -= chunk;
+            this.weight += chunk;
+        }
+        else{
+            bitten.weight = 0;
+            this.weight = preBiteWeight;
+        }
 
-        this.weight += chunk;
+
         this.fed = true;
 
         if(!bitten.alive){
