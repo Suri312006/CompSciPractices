@@ -22,7 +22,7 @@ IntroToCrypto 3 D no yes
 AP_DropShipping 4 F yes yes
 LeClass_James 5 A yes yes
 StrokeSkills101 6 F no yes
-FemboyStudies 7 A no no
+FemboyStudies2 7 A no no
 
 +
  */
