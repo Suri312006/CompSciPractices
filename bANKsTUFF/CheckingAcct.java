@@ -12,7 +12,13 @@ public class CheckingAcct extends BankAcct{
         super.withdraw(amount+fee);
         checkNo++;
     }
+
+    public void withdraw(double amount, double siteFee){
+        super.withdraw(amount+siteFee);
+    }
+
     public void printStatement(){
         System.out.print("Name: "+ super.getName()+" ID Number: "+ super.getMyIDNmber()+" Balance: "+ super.getBalance());
+        System.out.print("lol");
     }
 }
